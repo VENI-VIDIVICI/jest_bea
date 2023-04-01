@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sum button:slots 1`] = `
+"<button class="btn t-button--theme-primary">
+  <div>按钮</div>
+</button>"
+`;

@@ -4,7 +4,6 @@
  */
 
 export default {
-  preset: 'ts-jest',
   coverageProvider: "v8",
   testEnvironment: "jsdom",
   testEnvironmentOptions: {
@@ -15,7 +14,8 @@ export default {
   },
   moduleFileExtensions: ['vue', 'json', 'js', 'ts', "tsx", 'jsx', 'node', 'mjs'],
   transform: {
-    "^.+\.tsx$": "ts-jest",
+    // "^.+\.[j|t]sx?$": "babel-jest",
     '^.+\\.(vue)$': '@vue/vue3-jest',
+    '^.+\\.[jt]sx?$': 'babel-jest',
   }
 };
