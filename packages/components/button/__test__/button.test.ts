@@ -1,6 +1,4 @@
 import { mount } from "@vue/test-utils"
-import { h } from "vue";
-import Button from "../src/button.vue";
 import ButtonT from "../src/button"
 describe("sum", () => {
   it("可以做加法", () => {
@@ -12,5 +10,14 @@ describe("sum", () => {
     wrap.find("button").trigger("click")
     expect(wrap.emitted("click")).toBeTruthy()
     expect(wrap.html()).toContain("按钮")
+  });
+  it("disabled", () => {
+    const wrap = mount(ButtonT, {
+      props: {
+        disabled: true
+      }
+    })
+    wrap.find("button").trigger("click")
+    expect(wrap.emitted("click")).toBeFalsy()
   });
 });
